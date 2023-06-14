@@ -13,7 +13,7 @@ pipeline {
                         expression { return params.RUN_INTEGRATION_TESTS }
                     }
                     steps {
-                        sh './mvnw test -D testGroups=unit'
+                        sh './mvnw test -D testGroups=unit -f shopping-cart-v2/pom.xml'
                     }
                 }
             }
